@@ -1,10 +1,8 @@
-import {printNumbers} from './variable-declaration'
-
-class Point {
+class Pointer {
     constructor(private _x: number, private _y: number){
     }
 
-    drawPoint(){
+    draw(){
         console.log(`Point Drawing x : ${this._x} Drawing Y : ${this._y}`);
     }
 
@@ -19,8 +17,7 @@ class Point {
     
 }
 
-const point = new Point(10,20);
+const point = new Pointer(10,20);
 point.x = 10
 console.log('test', point.x)
-point.drawPoint()
-printNumbers();
+point.draw()
