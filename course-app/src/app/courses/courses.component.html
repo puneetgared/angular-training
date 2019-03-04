@@ -1,0 +1,25 @@
+<div class="input-group">
+  <div class="row">
+       <label>Add Training:</label>
+      <input #courseName type="text" class="form-control"
+      [value]="trainingName"
+       (keyup.enter)="addCourses($event)"
+       [(ngModel)]="trainingName"
+       >
+      <button class="btn btn-primary"
+      [ngClass]="{
+        'disabled' : !isActive
+      }"
+        [class.disabled]="!isActive"
+        (click)="add(courseName.value)"
+              >Add
+      </button>
+
+      {{trainingName}}
+  </div> 
+</div>
+  <h3>Training Title : {{title}}<h3>
+ <!-- <h3 [textContent]="title"><h3> -->
+  <ul>
+      <li *ngFor="let course of courses">{{course}}</li>
+  </ul>
